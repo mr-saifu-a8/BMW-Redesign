@@ -4,13 +4,7 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-/**
- * GLBModel
- * - props:
- *    url: path to glb (string)
- *    color: hex color string to attempt to apply to "paint" materials
- *    scale, position: optional
- */
+
 const GLBModel = ({
   url = "/src/assets/video/free_bmw_m3_e30.glb",
   color = "#f0f0f0",
@@ -41,8 +35,6 @@ const GLBModel = ({
             name.includes("car");
 
           if (isPaintLike) {
-            // If material uses a texture (map), setting color will multiply with texture.
-            // If texture strongly dominates, color change might be subtle.
             mat.color && mat.color.set(color);
             mat.needsUpdate = true;
           }

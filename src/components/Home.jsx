@@ -126,6 +126,7 @@ import ModelPage1 from "./ModelPage/ModelPage1";
 import Footer from "./Footer";
 import Header from './Header';
 import Video from "./Video";
+import ModelPage2 from "./ModelPage/ModelPage2";
 
 export default function Home() {
   const prefersReducedMotion =
@@ -163,6 +164,8 @@ export default function Home() {
         <ModelPage1 />
       </section>
 
+      <ModelPage2 />
+      
       <Video/>
 
         <section>

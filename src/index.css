@@ -27,13 +27,10 @@
   font-family: Rom;
   src: url(./assets/font/RammettoOne-Regular.ttf);
 }
-  @import
-  url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Syne:wght@400..800&display=swap');
+
 html, body {
 
   overflow-x: hidden; /* prevent horizontal scrollbar */
 }
-
-
 
 @import "tailwindcss"

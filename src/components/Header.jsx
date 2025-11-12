@@ -80,7 +80,7 @@ const Header = () => {
       {/* --- Slanted Video Cards Section --- */}
       <div className="flex justify-between items-start px-8 pb-16 relative gap-4">
         <VideoCard
-          src="/src/assets/video/eng-00-teaser-hd.mp4"
+          src="/src/assets/video/hoj-01-stage-hd.mp4"
           smallText="予防安全パッケージ"
           title="SAFETY SYSTEM +"
         />
