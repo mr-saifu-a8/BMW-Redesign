@@ -275,11 +275,13 @@ const StickyCols = () => {
             <div className="col-content relative w-full h-full">
               <div className="col-content-wrapper relative w-full h-full rounded-[3rem] p-10 flex flex-col justify-between overflow-hidden">
                 <h1 className="text-xl md:text-6xl font-medium w-[45vw] text-black">
-                  We design spaces where comfort meets quiet sophistication.
+                  The Ultimate Driving Machine
                 </h1>
                 <p className="text-2xl font-medium w-3/5 text-black">
-                  Layered textures, rich tones, and thoughtful details come
-                  together to create interiors that feel lived-in yet elevated.
+                  BMW har car ko performance aur luxury ka perfect balance dene
+                  ke liye banata hai. Chahe city drive ho ya highway ride, BMW
+                  ki cars ek smooth aur powerful experience deti hain jo driver
+                  ko ek alag hi level ka control aur confidence deti hai.
                 </p>
               </div>
             </div>
@@ -313,13 +315,13 @@ const StickyCols = () => {
                   <div className="col-content relative w-full h-full">
                     <div className="col-content-wrapper relative w-full h-full rounded-[3rem] p-10 flex flex-col justify-between ">
                       <h1 className="text-xl md:text-6xl font-medium w-[45vw] text-black">
-                        We design spaces where comfort meets quiet
-                        sophistication.
+                        Precision Engineering at Its Best
                       </h1>
                       <p className="text-2xl font-medium w-[45vw] text-black">
-                        Layered textures, rich tones, and thoughtful details
-                        come together to create interiors that feel lived-in yet
-                        elevated.
+                        BMW apni German engineering ke liye world-famous hai.
+                        Har car me advanced technology, aerodynamics aur premium
+                        materials ka perfect combination hota hai, jo long-term
+                        durability aur unmatched performance ensure karta hai.
                       </p>
                     </div>
                   </div>
@@ -344,7 +346,7 @@ const StickyCols = () => {
             <div className="col-img relative w-full h-full">
               <div className="col-img-wrapper relative w-full h-full bg-gray-800 rounded-[3rem] overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1749566710691-f959646d0330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGJtdyUyMHJlZHxlbnwwfHwwfHx8MA%3D%3D"
+                  src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Interior image 4"
                   className="w-full h-full object-cover"
                 />
@@ -359,13 +361,13 @@ const StickyCols = () => {
                   <div className="col-content relative w-full h-full">
                     <div className="col-content-wrapper relative w-full h-full rounded-[3rem] p-10 flex flex-col justify-between">
                       <h1 className="text-xl md:text-6xl font-medium w-[45vw] text-black">
-                        We design spaces where comfort meets quiet
-                        sophistication.
+                        Design That Defines Elegance
                       </h1>
                       <p className="text-2xl font-medium w-[45vw] text-black">
-                        Layered textures, rich tones, and thoughtful details
-                        come together to create interiors that feel lived-in yet
-                        elevated.
+                        BMW cars ka design sirf dekhne me hi nahi, experience
+                        karne me bhi classy hota hai. Bold lines, signature
+                        kidney grille, aur dynamic LED lights har model ko ek
+                        modern aur elegant identity dete hain.
                       </p>
                     </div>
                   </div>

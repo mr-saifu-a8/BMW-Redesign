@@ -78,7 +78,7 @@ const Header = () => {
       </h1>
 
       {/* --- Slanted Video Cards Section --- */}
-      <div className="flex justify-between items-start px-8 pb-16 relative gap-4">
+      <div className="flex  lg:flex-nowrap md:flex-nowrap  w-auto sm:px-0 justify-between items-start px-8 pb-16 relative gap-4">
         <VideoCard
           src="/src/assets/video/hoj-01-stage-hd.mp4"
           smallText="予防安全パッケージ"
