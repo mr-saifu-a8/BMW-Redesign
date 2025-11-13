@@ -88,7 +88,7 @@ const Hero = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         // Font Size: text-[8.5vw] on mobile, sm:text-[6.3vw] on tablet/desktop.
         // Ensure max size is capped for very large screens if needed, though 6.3vw is usually fine.
-        className="text-[10vw] sm:text-[7.3vw] pb-5 font-['mauline'] sm:leading-19 leading-10 text-[#373B46]"
+        className="text-[10vw] lg:text-[6.3vw]  pb-5 font-['mauline'] lg:leading-20 leading-10 text-[#373B46]"
       >
         The Ultimate <br /> Driving Machine
       </motion.h1>

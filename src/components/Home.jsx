@@ -26,8 +26,6 @@
 //   );
 // }
 
-
-
 // import { motion } from "framer-motion";
 // import Navbar from "../components/Navbar";
 // import Hero from "../components/Hero";
@@ -50,14 +48,10 @@
 //     >
 //       <Navbar />
 //       <Hero />
-      
+
 //     </motion.div>
 //   );
 // }
-
-
-
-
 
 // import { motion } from "framer-motion";
 // import Navbar from "../components/Navbar";
@@ -124,10 +118,9 @@ import Hero from "../components/Hero";
 import Feature from "./Feature/Freature"; // Fixed typo
 import ModelPage1 from "./ModelPage/ModelPage1";
 import Footer from "./Footer";
-import Header from './Header';
+import Header from "./Header";
 import Video from "./Video";
 import ModelPage2 from "./ModelPage/ModelPage2";
-import StickyCols from "./StickyCols";
 
 export default function Home() {
   const prefersReducedMotion =
@@ -154,26 +147,23 @@ export default function Home() {
       </section>
 
       <section>
-        <Header/>
+        <Header />
       </section>
       <section>
         <Feature />
       </section>
 
-      {/* Model Page */}
-      {/* <section>
+      <section>
         <ModelPage1 />
       </section>
 
-      <ModelPage2 /> */}
+      <ModelPage2 />
 
-      <StickyCols/>
-      
-      <Video/>
+      <Video />
 
-        <section>
-          <Footer/>
-        </section>
+      <section>
+        <Footer />
+      </section>
     </motion.main>
   );
 }
