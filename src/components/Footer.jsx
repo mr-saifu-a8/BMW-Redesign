@@ -1,10 +1,10 @@
+import { motion } from "framer-motion";
+
 const Footer = () => {
   return (
-    // Outer container for the footer, with a very dark background to match the UI
+    
     <footer className="bg-black text-white py-16 px-8 md:px-16 lg:px-24">
-      {/* "GET IN TOUCH" section and main content */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
-        {/* Left section: GET IN TOUCH heading and email */}
         <div className="lg:w-1/2">
           <h1 className="text-5xl uppercase md:text-5xl font-bold mb-8">
             Service & Contact
@@ -36,24 +36,28 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Image placeholder (rightmost in the design) */}
           <div className="w-full md:w-64  relative overflow-hidden">
-            {/* You can replace this div with an actual <img> tag */}
-            <img
-              src="/src/assets/BMW.png"
-              alt="Contact visual"
-              className="w-full h-full object-cover"
-            />
+            <motion.div
+              className="w-64 h-64"
+              whileHover={{ rotate: 360 }}
+              transition={{
+                duration: 1, // kitni der me 360° complete ho
+                ease: "easeInOut", // smooth rotation
+              }}
+            >
+              <img
+                className="w-full h-full"
+                src="/src/assets/image/pngegg.png"
+                alt="rotating-logo"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* "CONTACT /" line (as seen in the design) */}
       <p className="text-gray-500 mb-16 text-lg">CONTACT /</p>
 
-      {/* BMW specific sections based on your description */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-        {/* Quick Links */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Quick Links</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -174,7 +178,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* BMW.com */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">BMW.com</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -211,7 +214,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Visit us on */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Visit us on</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -238,10 +240,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
-      {/* Bottom section: Social links and Copyright */}
       <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-        {/* Social Links from the UI design */}
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-gray-400 text-sm mb-4 md:mb-0">
           <a href="#" className="hover:text-white transition-colors">
             BEHANCE <span className="text-gray-600">❯</span>
@@ -262,12 +261,8 @@ const Footer = () => {
             LINKEDIN <span className="text-gray-600">❯</span>
           </a>
         </div>
-
-        {/* Copyright from the UI design */}
         <p className="text-5xl font-extrabold text-white">© 25</p>
       </div>
-
-      {/* Note: The browser UI at the top of your image is not part of the footer component. */}
     </footer>
   );
 };

@@ -4,7 +4,7 @@ import Loader from "./components/Loader";
 import FluidHero from "./components/FluidHero";
 import Home from "./components/Home";
 import TOP_IMAGE from "./assets/image/top.jpg";
-import BOTTOM_IMAGE from "./assets/image/bottomimg.jpg";
+import BOTTOM_IMAGE from "./assets/image/bottom-img.jpg";
 import LocomotiveScroll from "locomotive-scroll";
 
 export default function App() {

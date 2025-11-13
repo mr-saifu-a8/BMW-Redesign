@@ -127,6 +127,7 @@ import Footer from "./Footer";
 import Header from './Header';
 import Video from "./Video";
 import ModelPage2 from "./ModelPage/ModelPage2";
+import StickyCols from "./StickyCols";
 
 export default function Home() {
   const prefersReducedMotion =
@@ -160,11 +161,13 @@ export default function Home() {
       </section>
 
       {/* Model Page */}
-      <section>
+      {/* <section>
         <ModelPage1 />
       </section>
 
-      <ModelPage2 />
+      <ModelPage2 /> */}
+
+      <StickyCols/>
       
       <Video/>
 
