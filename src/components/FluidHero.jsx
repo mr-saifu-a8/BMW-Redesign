@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect, useCallback } from "react";
 import * as THREE from "three";
 import {
@@ -7,20 +9,9 @@ import {
 } from "../components/shaders";
 
 const size = 500;
-const pingPongTargets = [
-  new THREE.WebGLRenderTarget(size, size, {
-    minFilter: THREE.LinearFilter,
-    magFilter: THREE.LinearFilter,
-    format: THREE.RGBAFormat,
-    type: THREE.FloatType,
-  }),
-  new THREE.WebGLRenderTarget(size, size, {
-    minFilter: THREE.LinearFilter,
-    magFilter: THREE.LinearFilter,
-    format: THREE.RGBAFormat,
-    type: THREE.FloatType,
-  }),
-];
+
+// Initialize targets inside useEffect to avoid SSR issues
+let pingPongTargets = null;
 let currentTarget = 0;
 
 const FluidHero = ({ topImagePath, bottomImagePath }) => {
@@ -48,7 +39,7 @@ const FluidHero = ({ topImagePath, bottomImagePath }) => {
         uniformsRef.current.display.uBottomTexture.value = texture;
         bottomTextureSize.current.set(
           texture.image.width,
-          texture.image.height
+          texture.image.height,
         );
       }
     });
@@ -82,13 +73,34 @@ const FluidHero = ({ topImagePath, bottomImagePath }) => {
     renderer.render(scene, camera);
 
     uniformsRef.current.rafId = requestAnimationFrame(() =>
-      animate(renderer, scene, simScene, camera)
+      animate(renderer, scene, simScene, camera),
     );
   }, []);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Initialize render targets only once on client
+    if (!pingPongTargets) {
+      pingPongTargets = [
+        new THREE.WebGLRenderTarget(size, size, {
+          minFilter: THREE.LinearFilter,
+          magFilter: THREE.LinearFilter,
+          format: THREE.RGBAFormat,
+          type: THREE.FloatType,
+        }),
+        new THREE.WebGLRenderTarget(size, size, {
+          minFilter: THREE.LinearFilter,
+          magFilter: THREE.LinearFilter,
+          format: THREE.RGBAFormat,
+          type: THREE.FloatType,
+        }),
+      ];
+      currentTarget = 0;
+    }
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -179,7 +191,7 @@ const FluidHero = ({ topImagePath, bottomImagePath }) => {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       uniformsRef.current.display.uResolution.value.set(
         window.innerWidth,
-        window.innerHeight
+        window.innerHeight,
       );
       uniformsRef.current.display.uDpr.value = window.devicePixelRatio;
     };

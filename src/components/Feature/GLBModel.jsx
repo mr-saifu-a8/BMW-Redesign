@@ -1,12 +1,11 @@
+"use client";
 
-
-// src/components/GLBModel.jsx
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-
+import bmwModelUrl from "../../assets/video/free_bmw_m3_e30.glb?url";
 
 const GLBModel = ({
-  url = "/src/assets/video/free_bmw_m3_e30.glb",
+  url = bmwModelUrl,
   color = "#f0f0f0",
   scale = 1,
   position = [0, -0.8, 0],
@@ -51,9 +50,16 @@ const GLBModel = ({
     }
   }, [scene, color]);
 
-  return <primitive object={scene} dispose={null} scale={scale} position={position} />;
+  return (
+    <primitive
+      object={scene}
+      dispose={null}
+      scale={scale}
+      position={position}
+    />
+  );
 };
 
-useGLTF.preload("/src/assets/video/free_bmw_m3_e30.glb");
+useGLTF.preload(bmwModelUrl);
 
 export default GLBModel;

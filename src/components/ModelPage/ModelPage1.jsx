@@ -1,3 +1,5 @@
+"use client";
+
 const ModelPage1 = () => {
   const videoUrl = "/src/assets/video/video2.mp4";
   const featureImageUrl1 = "/src/assets/image/bmw1.jpg";
@@ -58,8 +60,7 @@ const ModelPage1 = () => {
             muted
             playsInline
             className="w-full h-[55vw] pt-15 object-cover object-center"
-          >
-          </video>
+          ></video>
         </div>
       </div>
     </div>

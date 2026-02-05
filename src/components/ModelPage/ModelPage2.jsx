@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 
 const ModelPage2 = () => {
-  
   const featureImageUrl1 = "/src/assets/image/bmw3.jpg";
   const featureImageUrl2 = "/src/assets/image/bmw4.jpg";
 

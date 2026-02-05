@@ -1,8 +1,13 @@
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Loader({ onFinish, assetsToPreload = [], maxWait = 1200 }) {
+export default function Loader({
+  onFinish,
+  assetsToPreload = [],
+  maxWait = 1200,
+}) {
   const [exiting, setExiting] = useState(false);
 
   // Prevent body scroll while loader active
@@ -81,7 +86,10 @@ export default function Loader({ onFinish, assetsToPreload = [], maxWait = 1200 
     <motion.div
       initial={{ opacity: 1 }}
       animate={exiting ? { opacity: 0 } : { opacity: 1 }}
-      transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: "easeInOut" }}
+      transition={{
+        duration: prefersReducedMotion ? 0 : 0.45,
+        ease: "easeInOut",
+      }}
       onAnimationComplete={() => {
         if (exiting) onFinish && onFinish();
       }}

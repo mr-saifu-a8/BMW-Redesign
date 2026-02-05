@@ -213,9 +213,7 @@
 //   );
 // }
 
-
-
-
+"use client";
 
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
@@ -226,6 +224,7 @@ import {
   Html,
 } from "@react-three/drei";
 import GLBModel from "./GLBModel";
+import bmwModelUrl from "../../assets/video/free_bmw_m3_e30.glb?url";
 
 const models = [
   { name: "RX450h “version L” 2WD", price: "7,025,000" },
@@ -254,7 +253,6 @@ const Feature = () => {
         {/* LEFT: 2-column area for title + 3D view */}
         <div className="col-span-2 pr-6">
           <div className="flex justify-between items-end mb-6">
-           
             <div className="text-gray-600">
               <p className="absolute left-20 text-3xl font-['poly']">
                 360° VIEW
@@ -285,7 +283,7 @@ const Feature = () => {
               <Suspense fallback={<Html center>Loading 3D Model...</Html>}>
                 {/* Pass selectedColor so GLBModel will try to set paint color */}
                 <GLBModel
-                  url="/src/assets/video/free_bmw_m3_e30.glb"
+                  url={bmwModelUrl}
                   color={selectedColor}
                   scale={1.7}
                   position={[0, -0.8, 0]}
