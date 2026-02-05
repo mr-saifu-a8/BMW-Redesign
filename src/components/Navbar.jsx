@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { IoCarSport } from "react-icons/io5";
+import logo from "../assets/image/pngegg.png";
 
 const Navbar = () => {
   return (
@@ -13,11 +14,7 @@ const Navbar = () => {
           ease: "easeInOut", // smooth rotation
         }}
       >
-        <img
-          className="w-full h-full"
-          src="/src/assets/image/pngegg.png"
-          alt="rotating-logo"
-        />
+        <img className="w-full h-full" src={logo} alt="rotating-logo" />
       </motion.div>
       <div>
         <ul className='flex text-[#373B46] font-["poly"] gap-15'>

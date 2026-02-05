@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
+import hojVideo from "../assets/video/hoj-01-stage-hd.mp4";
+import m4Video from "../assets/video/BMW M4 Cinematic Edit _ PHONK x Speed _ 4K Ultra HD.mp4";
+import video695 from "../assets/video/6956154-hd_1920_1080_30fps.mp4";
 
 const VideoCard = ({ src, smallText, title }) => {
   const [hovered, setHovered] = useState(false);
@@ -81,23 +84,11 @@ const Header = () => {
 
       {/* --- Slanted Video Cards Section --- */}
       <div className="flex  lg:flex-nowrap md:flex-nowrap  w-auto sm:px-0 justify-between items-start px-8 pb-16 relative gap-4">
-        <VideoCard
-          src="/src/assets/video/hoj-01-stage-hd.mp4"
-          smallText="予防安全パッケージ"
-          title="SAFETY SYSTEM +"
-        />
+        <VideoCard src={hojVideo} smallText="予防安全パッケージ" title="SAFETY SYSTEM +" />
 
-        <VideoCard
-          src="/src/assets/video/BMW M4 Cinematic Edit _ PHONK x Speed _ 4K Ultra HD.mp4"
-          smallText="ザクサスのスペシャル動画"
-          title="SPECIAL MOVIE"
-        />
+        <VideoCard src={m4Video} smallText="ザクサスのスペシャル動画" title="SPECIAL MOVIE" />
 
-        <VideoCard
-          src="/src/assets/video/6956154-hd_1920_1080_30fps.mp4"
-          smallText="顧客満足度調査"
-          title="CUSTOMER SATISFACTION SURVEY"
-        />
+        <VideoCard src={video695} smallText="顧客満足度調査" title="CUSTOMER SATISFACTION SURVEY" />
       </div>
 
       <div className="border-t border-gray-200" />

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "../assets/image/pngegg.png";
 
 const Footer = () => {
   return (
@@ -45,11 +46,7 @@ const Footer = () => {
                 ease: "easeInOut", // smooth rotation
               }}
             >
-              <img
-                className="w-full h-full"
-                src="/src/assets/image/pngegg.png"
-                alt="rotating-logo"
-              />
+              <img className="w-full h-full" src={logo} alt="rotating-logo" />
             </motion.div>
           </div>
         </div>

@@ -1,9 +1,10 @@
 "use client";
 
+import videoUrl from "../../assets/video/video2.mp4";
+import featureImageUrl1 from "../../assets/image/bmw1.jpg";
+import featureImageUrl2 from "../../assets/image/bmw2.jpg";
+
 const ModelPage1 = () => {
-  const videoUrl = "/src/assets/video/video2.mp4";
-  const featureImageUrl1 = "/src/assets/image/bmw1.jpg";
-  const featureImageUrl2 = "/src/assets/image/bmw2.jpg";
 
   return (
     <div className="h-screen mb-30 bg-white">

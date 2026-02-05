@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
+import featureImageUrl1 from "../../assets/image/bmw3.jpg";
+import featureImageUrl2 from "../../assets/image/bmw4.jpg";
+import video695 from "../../assets/video/6956154-hd_1920_1080_30fps.mp4";
 
 const ModelPage2 = () => {
-  const featureImageUrl1 = "/src/assets/image/bmw3.jpg";
-  const featureImageUrl2 = "/src/assets/image/bmw4.jpg";
 
   return (
     <div
@@ -16,7 +17,7 @@ const ModelPage2 = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative h-24 lg:h-auto lg:order-1">
           <video
-            src="/src/assets/video/6956154-hd_1920_1080_30fps.mp4"
+            src={video695}
             autoPlay
             loop
             muted

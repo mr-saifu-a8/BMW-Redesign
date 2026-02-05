@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import bmwLogoVideo from "../assets/video/bmw-logo-video.mp4";
 
 export default function Loader({
   onFinish,
@@ -98,7 +99,7 @@ export default function Loader({
     >
       <video
         id="intro-video"
-        src="/src/assets/video/bmw-logo-video.mp4"
+        src={bmwLogoVideo}
         autoPlay
         muted
         playsInline
